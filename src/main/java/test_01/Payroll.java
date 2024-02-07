@@ -33,15 +33,15 @@ public class Payroll
 	}
 
 	//Sums the pay for all employees.
-	public double calculatePayroll()
+	public double[] calculatePayroll()
 	{
-		double totalPayroll = 0;
+		double payroll[] = new double[employees.size()];
 		
 		for (int i = 0; i < employees.size(); i++) 
 		{
-			totalPayroll += employees.get(i).fetchPay();
+			payroll[i] = employees.get(i).fetchPay();
 		}
 		
-		return totalPayroll;
+		return payroll;
 	}
 }

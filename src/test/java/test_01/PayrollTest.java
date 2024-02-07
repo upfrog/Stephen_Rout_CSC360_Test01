@@ -55,7 +55,8 @@ class PayrollTest
 		Tom.setHoursWorked(40);
 		assertEquals(625.00, David.fetchPay());
 		assertEquals(600.00, Tom.fetchPay());
-		assertEquals(David.fetchPay()+Tom.fetchPay(), company.calculatePayroll());
+		assertEquals(David.fetchPay(), company.calculatePayroll()[0]);
+		assertEquals(Tom.fetchPay(), company.calculatePayroll()[1]);
 		
 	}
 }
